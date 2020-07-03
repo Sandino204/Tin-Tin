@@ -1,6 +1,9 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, CardImg, CardText, Button } from 'reactstrap'
 import './styles.css'
+import Like from '../../shared/VectorLike.png'
+import Comm from '../../shared/VectorComments.png'
+import Arrow from '../../shared/VectorArrow.png'
 
 function Posts ({userThum, userImg, userName, userId, postLike, postComments, userLocalization }){
 
@@ -16,10 +19,10 @@ function Posts ({userThum, userImg, userName, userId, postLike, postComments, us
                 </CardHeader>
                 <CardBody className="row justify-content-center">
                     <CardImg src={userImg} alt="bar img" className="col-11 rounded"/>
-                    <div className="col-12 row justify-content-around ">
-                        <Button onClick={postLike++} className="col-4 btn-light text-dark mt-2 buttonPosts">Like</Button>
-                        <Button onClick={postComments.length} className="col-4 btn-light text-dark mt-2 buttonPosts">Comments</Button>
-                        <Button className="col-4 btn-light text-dark mt-2 buttonPosts">Bate-Papo</Button>
+                    <div className="col-12 row justify-content-end ">
+                        <Button onClick={postLike++} className="col-1 btn-light text-dark mt-2 mr-1 buttonPosts"><img src={Like} alt="Like"/></Button>
+                        <Button onClick={postComments.length} className="col-1 btn-light text-dark mr-1 mt-2 buttonPosts"><img src={Comm} alt=""/></Button>
+                        <Button className="col-1 btn-light mr-3 text-dark mt-2 buttonPosts"><img src={Arrow} alt=""/></Button>
                     </div>
                 </CardBody>
             </Card>

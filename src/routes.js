@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter , Switch , Route, Redirect } from 'react-router-dom'
 import Home from './pages/home'
 import Pub from './pages/Pub'
-import {dbPubs, allPosts, allStorys} from './database/db'
+import {dbPubs, allPosts, allStorys, Ambev} from './database/db'
 import Social from './pages/social'
 
 function Routes (){
@@ -15,7 +15,7 @@ function Routes (){
     
     function Sociale (){
         return(
-            <Social posts={allPosts} allStorys={allStorys}></Social>
+            <Social posts={allPosts} allStorys={allStorys} ambevA={Ambev.anounce}></Social>
         )
     }
 
@@ -24,9 +24,10 @@ function Routes (){
     return(
         <BrowserRouter>
             <Switch>
-                <Route exact path="/" component={Home}></Route>
+                <Route exact path="/" component={Sociale}></Route>
+                <Route exact path="/places" component={Home}></Route>
                 <Route exact path="/bar/:barId" component={Pub1}></Route>
-                <Route exact path="/social" component={Sociale}></Route>
+                <Route exact path="/social" component={Home}></Route>
                 <Redirect to="/"></Redirect>
             </Switch>
         </BrowserRouter>

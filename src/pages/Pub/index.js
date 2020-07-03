@@ -1,20 +1,42 @@
 import React from 'react'
-import {Button} from 'reactstrap'
+import {Button, Card, CardBody} from 'reactstrap'
 import './styles.css'
 import { Link } from 'react-router-dom'
 import Img from '../../shared/pubExemple.jpg'
 import Cardapio from '../../shared/Vector.png'
 import Map from '../../shared/Vector2.png'
-
+import Eve from '../../shared/Rectangle40.png'
+import OurC from '../../components/oursClients'
+import clientT from '../../shared/Ellipse17.png'
+import clientImg from  '../../shared/cerveja1.png'
 
 function Pub ({data}){
-
 
     if(data === null || data === undefined){
         return(
             <></>
         )
     }else{  
+
+        function RenderEvents(events){
+            return(
+                events.map((event) => {
+                    return(
+                        <img src={event.image} className="mt-5"></img>
+                    )
+                })
+            )
+        }
+
+        function RenderOurs(ours){
+            return(
+                ours.map((cli) =>{
+                    return(
+                        <OurC thumb={cli.thumb} name={cli.name} image={cli.image} id={cli.id}></OurC>
+                    )
+                })
+            )
+        }
         
         function isPremium(pre){
             if(pre === true){
@@ -33,7 +55,7 @@ function Pub ({data}){
                 <div className="row bg-white mt-3 justify-content-center mb-5">
                     <div className="col-3 row justify-content-center mt-5">
                         <p className="col-12 mb-1 text-center font-weight-bold">Clientes</p>
-                        <p className="col-12 text-center ml-4">{data.clients}</p>
+                        <p className="col-12 text-center ml-4">{data.client}</p>
                     </div>
                     <div className="col-6 row mt-3 justify-content-center font-weight-bold">
                         <p className="col-12 text-center">{isPremium(data.bar)}</p>
@@ -68,10 +90,21 @@ function Pub ({data}){
                             <p>{data.description2}</p>
                         </div>
                     </div>
-                    <div className="row">
-                        <h2 className="col-12 px">Proximos Eventos</h2>
-                    </div>
                 </div>
+                <Card className="container rounded mb-5">
+                    <CardBody className="row justify-content-center">
+                        <h2 className="col-12  px">Proximos Eventos</h2>
+                        {/* {RenderEvents(data.events)} */}
+                        <img src={Eve} alt="" className="mt-2 col-12"/>
+                    </CardBody>
+                </Card>
+                <Card className="container rounded">
+                    <CardBody className="row">
+                        <h2 className="px col-12">Nossos Clientes</h2>
+                        {/* {RenderOurs(data.clients)} */}
+                        <OurC thumb={clientT} name={data.clients[0].name} image={clientImg} id={data.clients[0].id}></OurC>
+                    </CardBody>
+                </Card>
             </div>
         )
     }

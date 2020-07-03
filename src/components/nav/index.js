@@ -16,7 +16,7 @@ function Navi(){
     return(
         <div className="container-fluid">
             <Nav className="row justify-content-center shadow">
-                <i className="text-center col-2 col-md-1 rounded shadow toggleM bg-light text-dark fa fa-bars" onClick={() => handleMenu(menu)}></i>
+                <i className="text-center col-2 col-md-1 mt-2 rounded shadow toggleM bg-light text-dark fa fa-bars" onClick={() => handleMenu(menu)}></i>
                 <Input type="text" className="col-10 col-md-11 input-nav bg-light" placeholder="O que você quer fazer hoje?" value={search} onChange={e => setSearch(e.target.value)}></Input>
             </Nav>
         </div>

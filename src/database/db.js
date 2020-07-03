@@ -6,10 +6,23 @@ export const dbPubs = [
         thumb: 'shared/pubThumbEx.jpg',
         description1: 'Av. Jubileu de Onoro 1000, Tangamandapio',
         description2: 'Horario de funcionamento Sexta a Domingo ',
-        clients: 200, 
+        client: 200, 
         bar: true, 
         full: 55, 
-
+        distance: 1,
+        events:[
+            {
+                image: 'shared/Rectangle40.png'
+            }
+        ], 
+        clients:[
+            {
+                id: 0,
+                image: 'shared/cerveja1.png', 
+                thumb: 'shared/Ellipse17.png',
+                name:  'pedrosilva27'
+            }
+        ]
     },
     {
         id: 1, 
@@ -18,9 +31,24 @@ export const dbPubs = [
         thumb: 'shared/pubThumbEx.jpg',
         description1: 'Av. Brazil',
         description2: 'Horario de funcionamento Quinta a Domingo ',
-        clients: 200, 
+        client: 200, 
         bar: true, 
         full: 55, 
+        distance: 1.5, 
+        events:[
+            {
+                image: 'shared/Rectangle40.png'
+            }
+        ],
+        clients:[
+            {
+                id: 0,
+                image: 'shared/cerveja1.png', 
+                thumb: 'shared/Ellipse17.png',
+                name:  'pedrosilva27'
+            }, 
+
+        ]
 
     },
     {
@@ -30,16 +58,29 @@ export const dbPubs = [
         thumb: 'shared/pubThumbEx.jpg',
         description1: 'Av. Jubileu ,Recife',
         description2: 'Horario de funcionamento Segunda a Quarta ',
-        clients: 200, 
+        client: 200, 
         bar: true, 
         full: 55, 
-
+        distance: 3.4, 
+        events:[
+            {
+                image: 'shared/Rectangle40.png'
+            }
+        ], 
+        clients:[
+            {
+                id: 0,
+                image: 'shared/cerveja1.png', 
+                thumb: 'shared/Ellipse17.png',
+                name:  'pedrosilva27'
+            }
+        ]
     }
 ]
 
 export const Ambev = {
     thumb: 'shared/ambevThumb.jpg', 
-    anounce: 'shared/AmbevA.jpg', 
+    anounce: 'shared/image8.png', 
 }
 
 export const allPosts = [
