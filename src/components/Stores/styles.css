@@ -1,0 +1,13 @@
+.storyT{
+    position: relative;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+}
+.storyT img{
+    width: 35px;
+    height: 35px;
+}
+.storyT p{
+    font-size: 7px;
+}

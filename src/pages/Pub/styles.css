@@ -1,0 +1,25 @@
+.nameBar{
+    font-size: 1.1em;
+}
+.arrow{
+    font-size: 25px !important;
+}
+.buttonsPub{
+    height: 90px;
+    border: solid #CCC 2px !important;
+    border-radius: 5px;
+}
+.buttonsPub img{
+    height: 40px;
+}
+.buttonsPub i{
+    font-size: 40px;
+    color: black;
+}
+.buttonsPub p{
+    font-weight: bold;
+    font-size: 10px;
+}
+.px{
+    font-size: 1.5em;
+}
