@@ -22,6 +22,25 @@ export const dbPubs = [
                 thumb: 'shared/Ellipse17.png',
                 name:  'pedrosilva27'
             }
+        ], 
+        itens: [
+            {
+                id: 0,
+                name: 'Cerveja Skol Puro Malte Lata 350ml ', 
+                image: 'shared/image21.png', 
+                qtn: 0, 
+                price: 9.90, 
+                fam: 99
+
+            }, 
+            {
+                id: 1,
+                name: 'Cerveja Brahma Duplo Malte Lata 350ml',
+                image: 'shared/image13.png', 
+                qtn: 0, 
+                price: 8.80, 
+                fam: 100 
+            }
         ]
     },
     {
@@ -48,6 +67,25 @@ export const dbPubs = [
                 name:  'pedrosilva27'
             }, 
 
+        ], 
+        itens: [
+            {
+                id: 0,
+                name: 'Cerveja Skol Puro Malte Lata 350ml ', 
+                image: 'shared/image21.png', 
+                qtn: 0, 
+                price: 9.90, 
+                fam: 100,
+
+            }, 
+            {
+                id: 1,
+                name: 'Cerveja Brahma Duplo Malte Lata 350ml',
+                image: 'shared/image13.png', 
+                qtn: 0, 
+                price: 8.80, 
+                fam: 110 
+            }
         ]
 
     },
@@ -73,6 +111,25 @@ export const dbPubs = [
                 image: 'shared/cerveja1.png', 
                 thumb: 'shared/Ellipse17.png',
                 name:  'pedrosilva27'
+            }
+        ], 
+        itens: [
+            {
+                id: 0,
+                name: 'Cerveja Skol Puro Malte Lata 350ml ', 
+                image: 'shared/image21.png', 
+                qtn: 0, 
+                price: 9.90,
+                fam: 100,
+
+            }, 
+            {
+                id: 1,
+                name: 'Cerveja Brahma Duplo Malte Lata 350ml',
+                image: 'shared/image13.png', 
+                qtn: 0, 
+                price: 8.80, 
+                fam: 99 
             }
         ]
     }
@@ -201,30 +258,47 @@ export const allStorys = [
             }
         ]
     },
+]
+
+export const AllGroups = [
     {
-        id: 6,
-        name: 'Bar do Jão', 
-        thumb: 'shared/Ellipse12.png', 
-        images: [
+        id: 0, 
+        name: 'Amiginhos',
+        thumb: 'shared/Ellipse25.png' ,
+        mensages:[
             {
-                img: 'shared/AmbevA.jpg'
-            }, 
+                id: 0,
+                name: 'Iago',
+                mensage: 'Bora para o bar do seu Ze hoje?',
+            },
             {
-                img: 'shared/localiza1.png'
+                id: 1,
+                name: 'Lucas',
+                mensage: 'Já to lá!!!',
+            },
+            {
+                id: 2,
+                name: 'Joaquina',
+                mensage: 'Chego de 8 horas',
             }
         ]
     }, 
     {
-        id: 7,
-        name: 'Lucinha', 
-        thumb: 'shared/Ellipse18.png', 
-        images: [
+        id: 1, 
+        name: 'Bar do Zé', 
+        thumb: 'shared/Ellipse25.png' ,
+        mensages: [
             {
-                img: 'shared/AmbevA.jpg'
+                id: 0, 
+                name: 'Alberto', 
+                mensage: 'Bora Começar os trabalhos', 
             }, 
             {
-                img: 'shared/localiza1.png'
+                id: 1, 
+                name: 'Alberto', 
+                mensage: 'Hiiihaaaaa'
             }
         ]
-    }
+    } 
+
 ]

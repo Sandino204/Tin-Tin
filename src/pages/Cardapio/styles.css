@@ -1,0 +1,19 @@
+.Reserve{
+    z-index: 100;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.Reserve img{
+    height: 30px;
+}
+
+.modale{
+    z-index: 200;
+    width: 100vw !important;
+    position: absolute !important;
+    bottom: 0px !important;
+    left: 0px !important;
+}
+

@@ -1,16 +1,15 @@
 import React from 'react'
 import {Button, Card, CardBody} from 'reactstrap'
 import './styles.css'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import Img from '../../shared/pubExemple.jpg'
 import Cardapio from '../../shared/Vector.png'
 import Map from '../../shared/Vector2.png'
-import Eve from '../../shared/Rectangle40.png'
 import OurC from '../../components/oursClients'
-import clientT from '../../shared/Ellipse17.png'
-import clientImg from  '../../shared/cerveja1.png'
 
 function Pub ({data}){
+
+    const History = useHistory()
 
     if(data === null || data === undefined){
         return(
@@ -18,11 +17,19 @@ function Pub ({data}){
         )
     }else{  
 
+        function handleMenu(id){
+            History.push(`/bar/${data.id}/menu`)
+        }
+
+        function handleChat(){
+            History.push(`/mensages`)
+        }
+
         function RenderEvents(events){
             return(
                 events.map((event) => {
                     return(
-                        <img src={event.image} className="mt-5"></img>
+                        <img src={require(`../../${event.image}`)} className="mt-5"></img>
                     )
                 })
             )
@@ -70,11 +77,11 @@ function Pub ({data}){
                         <img src={Img} alt="Imagem do Bar" className="col-12 img-thumbnail shadow"/>
                     </div>
                     <div className="row justify-content-around">
-                        <Button className="btn-light shadow rounded col-3 row buttonsPub mt-3 ">
+                        <Button className="btn-light shadow rounded col-3 row buttonsPub mt-3 " onClick={() => handleMenu(data.id)}>
                             <img src={Cardapio} alt="Cardapio"/>
                             <p className="text-dark">Cardapio</p>
                         </Button>
-                        <Button className="btn-light shadow rounded col-3 row buttonsPub mt-3 ">
+                        <Button className="btn-light shadow rounded col-3 row buttonsPub mt-3 " onClick={() => handleChat()}>
                             <i className="fa fa-user"></i>
                             <p className="text-dark">Entrar no chat</p>
                         </Button>
@@ -94,15 +101,13 @@ function Pub ({data}){
                 <Card className="container rounded mb-5">
                     <CardBody className="row justify-content-center">
                         <h2 className="col-12  px">Proximos Eventos</h2>
-                        {/* {RenderEvents(data.events)} */}
-                        <img src={Eve} alt="" className="mt-2 col-12"/>
+                        {RenderEvents(data.events)}
                     </CardBody>
                 </Card>
                 <Card className="container rounded">
                     <CardBody className="row">
                         <h2 className="px col-12">Nossos Clientes</h2>
-                        {/* {RenderOurs(data.clients)} */}
-                        <OurC thumb={clientT} name={data.clients[0].name} image={clientImg} id={data.clients[0].id}></OurC>
+                        {RenderOurs(data.clients)}
                     </CardBody>
                 </Card>
             </div>

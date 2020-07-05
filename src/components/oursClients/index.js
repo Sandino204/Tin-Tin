@@ -6,10 +6,10 @@ function OurClients({thumb, name, image, id}){
         <Card className="container" key={id}>
             <CardBody className="Row justify-content-center">
                 <div className="col-12 row dflex justify-content-center">
-                    <img src={thumb} alt="thumb" className="ml-4"/>
+                    <img src={require(`../../${thumb}`)} alt="thumb" className="ml-4"/>
                 </div>
                 <p className="names col-12 text-center font-weight-bold">{name}</p>
-                <CardImg src={image} alt="image" className="col-12"/>
+                <CardImg src={require(`../../${image}`)} alt="image" className="col-12"/>
             </CardBody>
         </Card>
     )

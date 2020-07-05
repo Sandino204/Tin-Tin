@@ -1,0 +1,28 @@
+.lala{
+    margin-top: 5px;
+    margin-left: 20px;
+    height: 30px !important;
+    width: 30px !important;
+}
+
+.allM{
+    z-index: -100;
+    height: 75vh;
+    position: absolute;
+    bottom: 20vh;
+    overflow-y: auto;
+}
+.inputs{
+    width: 100vw;
+    position: fixed;
+    bottom: 60px;
+}
+.inputs img{
+    margin-bottom: 5px;
+    margin-left: 5px;
+    height: 28px;
+    width: 28px;
+}
+.cont{
+    width: 100vw !important;
+}
